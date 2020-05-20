@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../LearningManagementSolution/Menu.css" rel="stylesheet">
+    <link href="../LearningManagementSolution/Layout.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <script src="../LearningManagementSolution/Scripts/Student1.js"></script>
+    <script src="../LearningManagementSolution/Scripts/alphabet1.js"></script>
+    <script src="../LearningManagementSolution/Scripts/color1.js"></script>
+    <script src="../LearningManagementSolution/Scripts/table1.js"></script>
+    <script src="teacher1.js"></script>
+ <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>-->
+<script src="../LearningManagementSolution/Scripts/jquery.min.js"></script>
+ <script  src="../LearningManagementSolution/Scripts/jspdf.min.js"></script>
+ <script src="validate.js"></script>
+    <title>  Learning Management Solution </title>
+</head>
+</head>
+<body>
+    <input class="logout" type="button" value="logout" onclick="logout()" />
+    <div class="Header"> <center><h3>Welcome to learning management</h3></center>
+    </div>
+
+    <div class="tab">     
+        <a href="teacher1.html" class="tablinks">Teacher Management</a>
+        <a href="#" class="tablinks" id="">Report Management</A>  
+    </div>
+    
+    <div id="Tokyo" class="tabcontent">
+        <div class="scrollmenu">
+        
+    </div>
+    <div id="formId" style="display:block">
+        <table style="margin-left:auto; margin-right:auto;">
+            <tr><td><label style="font-size:20px"> Teacher Name:<span class="required">*</span></label></td><td><input type="text" id="teachername" name="fname" maxlength="50" onfocusout="Tval()"/></td></tr>
+           <tr><td></td> <td><label style="font-size:15px" color ="red" id="teid"></label></td></tr>
+            <tr><td><label style="font-size:20px">Class:<span class="required">*</span></label></td><td>  <input type="number" id="cls" name="cls"  min="1" max="12" style="width:173px" onfocusout="Cval()" /></td></tr>
+            <tr><td></td> <td><label style="font-size:15px" color ="red" id="clid"></label></td></tr>
+            <tr>
+                <td>
+                    <label style="font-size:20px">
+                        Subject:
+                    </label>
+                </td>
+                <td><input type="text" id="sub" name="sub" maxlength="20" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <label style="font-size:20px">
+                        Phone number:
+                    </label>
+                </td>
+                <td><input type="tel" id="phn" name="phn" maxlength="10" onfocusout="Pval()" /></td>
+            </tr>
+            <tr><td></td> <td><label style="font-size:15px" color ="red" id="phid"></label></td></tr>
+            <tr>
+                <td>
+                    <label style="font-size:20px">
+                        Gender:
+                    </label>
+                </td>
+                    <td><select  id="gen" name="gen" style="width:170px;" >
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option></select>
+                    </td>
+                </tr>
+            
+            <tr><td></td><td colspan="2"><input type="submit" id="submitid" name="gen" class="Setbut" onclick="CreateSubmit()" /></td></tr>
+        </table>
+    </div>
+        <div id="menu1id" class="Menustu"></div>
+        <div id="menu3id"></div>
+    </div>
+     <div id="divprint" style="display:none">
+        <p><label id="" style="font-size:40px">Teacher:</label><label style="font-size:35px" id="teacherval"></label> </br></p>
+        <p><label id="" style="font-size:40px">Class:</label><label style="font-size:35px" id="classval"></label></br></p>
+        <p><label id="" style="font-size:40px">Subject:</label><label style="font-size:35px" id="subjectval"></label></br></p>
+        <p><label id="" style="font-size:40px">PhoneNumber:</label><label style="font-size:35px" id="phoneval"></label></br></p>
+        <p><label id="" style="font-size:40px">Gender:</label><label style="font-size:35px" id="generval"></label></br></p>
+
+    </div>
+</body>
+</html>
+
+
